@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+bundled/
+release/
+*.dmg
+*.zip
+*.blockmap
+
+# macOS
+.DS_Store
+*.app/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Electron builder
+builder-debug.yml
+builder-effective-config.yaml
+
+# Temporary
+tmp/
+temp/
