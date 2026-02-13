@@ -1,202 +1,250 @@
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-12%2B-blue?logo=apple&logoColor=white" alt="macOS 12+">
-  <img src="https://img.shields.io/badge/Electron-28-47848F?logo=electron&logoColor=white" alt="Electron">
-  <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black" alt="React 18">
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
+  <img src="https://img.shields.io/badge/零命令行-纯图形界面-orange" alt="No CLI">
+  <img src="https://img.shields.io/badge/零依赖-开箱即用-brightgreen" alt="Zero Dependency">
 </p>
 
 <h1 align="center">OpenClaw 飞书专版<br><sub>Feishu / Lark AI Bot Desktop App</sub></h1>
 
 <p align="center">
-  <b>3 分钟拥有你的私有飞书 AI 助手 — 零依赖、开箱即用</b><br>
-  <i>Your private AI assistant on Feishu / Lark in 3 minutes — zero dependencies, ready out of the box</i>
+  <b>给不会写代码的你，做了一个飞书 AI 机器人安装包。<br>双击安装，点点鼠标，3 分钟搞定。</b>
 </p>
 
 <p align="center">
-  <a href="#-快速开始--quick-start">快速开始</a> •
-  <a href="#-功能特性--features">功能特性</a> •
+  <i>A dead-simple macOS app that gives you an AI chatbot in Feishu / Lark.<br>No coding, no terminal, no server — just install and click.</i>
+</p>
+
+<p align="center">
+  <a href="#-三步搞定--3-steps-to-go">三步搞定</a> •
+  <a href="#-和普通版-openclaw-有什么区别--vs-regular-openclaw">对比普通版</a> •
   <a href="#-支持的-ai-模型--supported-models">AI 模型</a> •
-  <a href="#-安装使用指南--documentation">文档</a> •
-  <a href="#-常见问题--faq">FAQ</a>
+  <a href="#-常见问题--faq">FAQ</a> •
+  <a href="#-给开发者--for-developers">开发者</a>
 </p>
 
 ---
 
-## 这是什么？ | What is this?
+## 做这个项目的初衷
 
-**OpenClaw 飞书专版**是一款 macOS 桌面应用，让你在飞书（Feishu / Lark）中拥有一个 AI 聊天机器人。不需要服务器、不需要命令行、不需要安装 Node.js —— 下载 DMG，拖入 Applications，跟着向导配置，完成。
+想在飞书里接一个 AI 机器人，但一搜教程全是命令行、Docker、服务器部署……
 
-**OpenClaw Feishu Edition** is a macOS desktop app that gives you an AI chatbot inside Feishu (Lark). No server, no command line, no Node.js installation needed — download the DMG, drag to Applications, follow the setup wizard, and you're done.
+**如果你也觉得这些太折腾了，这个项目就是为你做的。**
 
-> **为什么选择 OpenClaw 飞书专版？**
->
-> - 你不想折腾服务器，但想让团队用上 AI
-> - 你想把 AI 接入飞书，而不是切换到另一个 App
-> - 你想用国产大模型，但不想写代码对接 API
->
-> **Why OpenClaw Feishu Edition?**
->
-> - You want AI for your team without managing servers
-> - You want AI inside Feishu / Lark, not in yet another app
-> - You want to use Chinese AI models without writing API code
+OpenClaw 飞书专版把所有技术细节都藏在了一个 `.dmg` 安装包里。你要做的只有三件事：在飞书后台建个机器人、去 AI 平台拿个 Key、然后在应用里填进去。全程鼠标操作，不需要打开终端，不需要输入任何命令。
+
+> **If you've ever wished you could set up a Feishu/Lark AI bot without touching a terminal, this is it.** Download, install, click through the wizard, done. Zero command line. Zero server. Zero coding.
 
 ---
 
-## ✨ 功能特性 | Features
+## 🚀 三步搞定 | 3 Steps to Go
 
-| 特性 Feature | 说明 Description |
+<table>
+<tr>
+<td width="33%" align="center">
+
+### 1️⃣ 安装应用
+**Install**
+
+下载 DMG → 拖入 Applications
+
+就像装其他 Mac 应用一样
+
+*Just like installing any Mac app*
+
+</td>
+<td width="33%" align="center">
+
+### 2️⃣ 建飞书机器人
+**Create Bot**
+
+在飞书后台点点鼠标创建
+
+[详细图文教程 →](docs/安装使用指南.md)
+
+*Click-through guide included*
+
+</td>
+<td width="33%" align="center">
+
+### 3️⃣ 填入 Key
+**Enter API Key**
+
+跟着应用内向导操作
+
+粘贴 App ID 和 API Key 即可
+
+*Paste your keys, that's it*
+
+</td>
+</tr>
+</table>
+
+**然后？** 打开飞书，找到你的机器人，直接聊天。就这么简单。
+
+**Then?** Open Feishu, find your bot, start chatting. That's it.
+
+> 📦 [**点击下载最新版 DMG →**](../../releases)
+>
+> 安装包约 230 MB，已内置全部运行依赖，下载后拖入 Applications 即可使用。
+>
+> ~230 MB installer with everything bundled. Download, drag, done.
+
+---
+
+## ⚡ 和普通版 OpenClaw 有什么区别？ | vs Regular OpenClaw
+
+|  | **OpenClaw 飞书专版** ✨ | **OpenClaw 普通版** |
+|:---|:---|:---|
+| **安装方式** | DMG 拖入即用，像装 QQ 一样 | `npm install openclaw` 命令行安装 |
+| **需要命令行吗** | ❌ **完全不需要** | ✅ 需要熟悉终端操作 |
+| **需要装 Node.js 吗** | ❌ 已内置 | ✅ 需要自己装 |
+| **需要服务器吗** | ❌ 你的 Mac 就是服务器 | ❌ 同样不需要 |
+| **配置方式** | 图形界面向导，点点鼠标 | 手动编辑 YAML 配置文件 |
+| **AI 模型配置** | 选模型 → 粘贴 Key → 自动完成 | 需要手动填写 URL、格式等参数 |
+| **支持的平台** | 飞书（专注优化） | 飞书、Discord、Slack、微信等多平台 |
+| **国产模型适配** | 已预置 MiniMax / GLM / 豆包 / Kimi | 需要自己配 URL 和 API 格式 |
+| **适合谁** | 不想碰代码的团队管理者、运营、HR… | 喜欢折腾的开发者 |
+| **一句话总结** | **给普通人用的飞书 AI 机器人** | 灵活强大的 AI Gateway 框架 |
+
+> 简单说：普通版 OpenClaw 像一台组装电脑，灵活但需要动手；飞书专版像一台开箱即用的 iMac，插电就能用。
+>
+> *Regular OpenClaw is a DIY PC — powerful and flexible. Feishu Edition is an iMac — just plug in and go.*
+
+---
+
+## ✨ 功能一览 | Features
+
+| | |
 |:---|:---|
-| **零依赖安装** Zero-Dependency | DMG 内置 Node.js 和 OpenClaw 引擎，拖入即用。No external dependencies — everything bundled in the DMG. |
-| **图形化配置** GUI Setup Wizard | 步步引导，3 分钟完成。Step-by-step wizard, done in 3 minutes. |
-| **四大国产模型** 4 Chinese AI Models | MiniMax、智谱 GLM、豆包 Doubao、Kimi 一键切换。Switch between models with one click. |
-| **私聊 + 群聊** DM & Group Chat | 私聊直接对话，群聊 @机器人 触发。Direct messages and @-mention in group chats. |
-| **飞书长连接** WebSocket | 无需公网服务器或域名。No public server or domain needed. |
-| **菜单栏常驻** Menu Bar App | macOS 菜单栏图标实时显示运行状态。Real-time status in macOS menu bar. |
-| **34 个内置插件** 34 Built-in Plugins | 天气、网页摘要、代码执行等，按需启用。Weather, web summary, code execution, and more. |
+| **🖱️ 纯鼠标操作** | 从安装到使用，全程不需要打开终端或输入任何命令 |
+| **📦 零依赖** | 不用装 Node.js、npm 或任何开发工具，DMG 里全包了 |
+| **🧙 配置向导** | 应用内一步步引导，填空题式操作，3 分钟完成 |
+| **🤖 四大国产模型** | MiniMax、智谱 GLM、豆包、Kimi，选一个就行 |
+| **💬 私聊 + 群聊** | 私聊直接对话，群里 @机器人 就能触发 |
+| **🔌 无需服务器** | 飞书 WebSocket 长连接，你的 Mac 就是"服务器" |
+| **📍 菜单栏常驻** | 右上角小图标，绿色 = 正常运行，随时查看状态 |
+| **🧩 34 个插件** | 天气、搜索、网页摘要、代码执行……按需开启 |
 
 ---
 
 ## 🤖 支持的 AI 模型 | Supported Models
 
-| 模型 Model | 特点 Highlights | 适合场景 Best For |
+选一个你喜欢的就行，应用里可以随时切换：
+
+| 模型 | 一句话介绍 | 注册地址 |
 |:---|:---|:---|
-| **MiniMax** ⭐ 推荐 | 中文写作出色，性价比高 · Excellent Chinese writing, cost-effective | 日常对话、写作 · Daily chat, writing |
-| **智谱 GLM** (Zhipu) | 编程和工具调用强 · Strong coding & tool use | 编程辅助 · Coding assistant |
-| **豆包 Doubao** (ByteDance) | 字节出品，综合能力强 · Well-rounded by ByteDance | 通用场景 · General purpose |
-| **Kimi** (Moonshot) | 128K 超长上下文 · 128K ultra-long context | 长文档分析 · Long document analysis |
-| **自定义** Custom | 兼容 OpenAI API 格式 · OpenAI API compatible | 高级用户 · Power users |
+| **MiniMax** ⭐ 推荐 | 中文写作出色，性价比高，新用户有免费额度 | [minimaxi.com →](https://www.minimaxi.com/platform) |
+| **智谱 GLM** | 清华系出品，编程问答强 | [open.bigmodel.cn →](https://open.bigmodel.cn) |
+| **豆包 Doubao** | 字节跳动出品，综合能力好 | [volcengine.com →](https://console.volcengine.com/ark) |
+| **Kimi** | 月之暗面出品，能读超长文档（128K） | [moonshot.cn →](https://platform.moonshot.cn) |
 
----
-
-## 🚀 快速开始 | Quick Start
-
-### 第一步：下载安装 | Step 1: Install
-
-从 [Releases](../../releases) 页面下载最新 `.dmg` 文件，双击打开，拖入 Applications 文件夹。
-
-Download the latest `.dmg` from [Releases](../../releases), double-click to open, drag to Applications.
-
-> 安装包约 400–500 MB（已内置所有运行依赖）
+> 还没有 API Key？没关系，先装应用，向导里可以跳过，拿到 Key 后再补上。
 >
-> The installer is ~400–500 MB (all dependencies are bundled).
-
-### 第二步：创建飞书机器人 | Step 2: Create Feishu Bot
-
-在 [飞书开放平台](https://open.feishu.cn) 创建企业自建应用，添加机器人能力，配置权限和事件订阅。
-
-Create a custom app on [Feishu Open Platform](https://open.feishu.cn), add Bot capability, configure permissions and event subscriptions.
-
-详见 👉 [安装使用指南](docs/安装使用指南.md)
-
-### 第三步：配置并使用 | Step 3: Configure & Use
-
-启动应用 → 按向导填入 App ID / Secret 和 AI API Key → 在飞书中与你的 AI 助手对话！
-
-Launch the app → Enter App ID / Secret and AI API Key in the wizard → Chat with your AI bot in Feishu!
-
----
-
-## 🛠️ 从源码构建 | Build from Source
-
-```bash
-# 克隆仓库 | Clone
-git clone https://github.com/lhfer/openclaw-feishu-edition.git
-cd openclaw-feishu-edition
-
-# 安装依赖 | Install dependencies
-npm install
-
-# 开发模式 | Development
-npm run dev
-
-# 构建 DMG（含 Node.js + OpenClaw 引擎）| Build DMG (with bundled engine)
-npm run dist:mac
-
-# 仅构建，不打包引擎 | Build without bundling engine
-npm run dist:mac:nobundle
-```
-
-**构建要求 | Build Requirements:** Node.js 18+, macOS 12+
-
----
-
-## 📁 项目结构 | Project Structure
-
-```
-openclaw-feishu-edition/
-├── core/                  # 核心逻辑 | Core logic
-│   ├── config-manager.ts  #   配置管理 | Config management
-│   ├── feishu-validator.ts #   飞书验证 | Feishu validation
-│   └── model-validator.ts  #   模型验证 | Model validation
-├── electron/              # Electron 主进程 | Main process
-│   ├── main.ts            #   应用入口 | Entry point
-│   ├── gateway-manager.ts #   引擎管理 | Engine management
-│   ├── ipc-handlers.ts    #   IPC 通信 | IPC communication
-│   ├── preload.ts         #   预加载 | Preload script
-│   └── tray.ts            #   菜单栏 | Menu bar tray
-├── renderer/              # React 前端 | Frontend
-│   ├── components/        #   UI 组件 | Components
-│   ├── pages/             #   向导 & 设置 | Wizard & Settings
-│   └── App.tsx            #   根组件 | Root component
-├── scripts/
-│   └── prepare-bundle.sh  # 打包脚本 | Bundle script
-├── locales/zh-CN.json     # 中文本地化 | Chinese i18n
-└── docs/                  # 文档 | Documentation
-```
-
----
-
-## 📖 安装使用指南 | Documentation
-
-- [**安装使用指南**](docs/安装使用指南.md) — 从零开始的完整教程，包含飞书机器人创建、AI 模型开通、常见问题排查
-- Complete setup guide (Chinese) covering Feishu bot creation, AI model onboarding, and troubleshooting
+> *Don't have an API key yet? Install the app first, skip the model step in the wizard, and add it later.*
 
 ---
 
 ## ❓ 常见问题 | FAQ
 
 <details>
-<summary><b>需要安装 Node.js 吗？</b> | Do I need Node.js?</summary>
+<summary><b>我完全不懂技术，能用吗？</b></summary>
 <br>
-不需要。DMG 已内置 Node.js v22 和 OpenClaw 引擎。<br>
-No. Node.js v22 and the OpenClaw engine are bundled in the DMG.
+能。这个项目就是为不懂技术的人做的。安装过程和装微信、QQ 一样——下载、拖入、打开。配置过程就是复制粘贴几个 Key。全程不需要打开终端。
 </details>
 
 <details>
-<summary><b>需要服务器吗？</b> | Do I need a server?</summary>
+<summary><b>需要安装 Node.js 吗？</b></summary>
 <br>
-不需要。飞书长连接（WebSocket）模式让机器人直接从你的 Mac 连接飞书服务器。<br>
-No. Feishu's WebSocket mode connects directly from your Mac — no public server needed.
+不需要。安装包已经内置了 Node.js v22 和 OpenClaw 引擎的全部依赖。你的电脑上不需要有任何开发工具。
 </details>
 
 <details>
-<summary><b>支持 Intel Mac 吗？</b> | Does it support Intel Mac?</summary>
+<summary><b>需要自己的服务器吗？</b></summary>
 <br>
-支持。构建时运行 <code>npm run prepare-bundle:x64</code> 即可。<br>
-Yes. Use <code>npm run prepare-bundle:x64</code> when building.
+不需要。应用通过飞书的 WebSocket 长连接模式工作，你的 Mac 就是"服务器"。不需要公网 IP，不需要域名，不需要云服务。
 </details>
 
 <details>
-<summary><b>可以同时用多个模型吗？</b> | Can I use multiple models?</summary>
+<summary><b>关掉应用后机器人还能回复吗？</b></summary>
 <br>
-目前一次只能配置一个模型，但可以在设置中随时切换。<br>
-Currently one model at a time, but you can switch anytime in Settings.
+不能。机器人运行在你的 Mac 上，关掉应用（或合上电脑）后机器人就停了。重新打开应用会自动恢复。
+</details>
+
+<details>
+<summary><b>支持 Intel Mac 吗？</b></summary>
+<br>
+支持。目前提供的 DMG 是 Apple Silicon（M1/M2/M3/M4）版本。如需 Intel 版，从源码构建时运行 <code>npm run prepare-bundle:x64</code> 即可。
+</details>
+
+<details>
+<summary><b>可以同时用多个 AI 模型吗？</b></summary>
+<br>
+目前一次配置一个模型，但可以在设置里随时切换，切换后立即生效，不需要重启。
+</details>
+
+<details>
+<summary><b>安装包为什么有 230 MB 这么大？</b></summary>
+<br>
+因为把所有依赖都打包进去了（Node.js 运行时 + OpenClaw 引擎 + 全部插件），这样你就不需要在电脑上安装任何其他东西。"大"换来的是"简单"。
 </details>
 
 ---
 
-## 🧩 技术栈 | Tech Stack
+## 📖 安装使用指南 | Documentation
 
-**Electron** · **React 18** · **TypeScript 5** · **Tailwind CSS** · **Vite 5** · **OpenClaw Engine** · **Feishu Open Platform SDK**
+我们写了一份非常详细的图文教程，从创建飞书机器人到开始使用，每一步都有说明：
+
+👉 [**安装使用指南**](docs/安装使用指南.md)
+
+内容包括：飞书机器人创建（7 步图文）、权限配置、AI 模型注册开通、常见问题排查。
+
+---
+
+<details>
+<summary><h2>🔧 给开发者 | For Developers</h2></summary>
+
+### 从源码构建
+
+```bash
+git clone https://github.com/lhfer/openclaw-feishu-edition.git
+cd openclaw-feishu-edition
+
+npm install           # 安装依赖
+npm run dev           # 开发模式
+npm run dist:mac      # 构建 DMG（含 Node.js + 引擎打包）
+npm run dist:mac:nobundle  # 仅构建，不打包引擎
+```
+
+**构建要求：** Node.js 18+, macOS 12+
+
+### 技术栈
+
+**Electron 28** · **React 18** · **TypeScript 5** · **Tailwind CSS** · **Vite 5** · **OpenClaw Engine** · **Feishu Open Platform SDK**
+
+### 项目结构
+
+```
+openclaw-feishu-edition/
+├── core/                  # 核心逻辑（配置管理、飞书验证、模型验证）
+├── electron/              # Electron 主进程（引擎管理、IPC、托盘）
+├── renderer/              # React 前端（配置向导、设置页面）
+├── scripts/               # 构建脚本（Node.js + 引擎打包）
+├── locales/               # 中文本地化
+└── docs/                  # 用户文档
+```
+
+</details>
 
 ---
 
 ## 🤝 Contributing
 
-欢迎 PR 和 Issue！如果这个项目对你有帮助，请给一个 ⭐ Star，这是对我最大的鼓励。
+欢迎 PR 和 Issue！无论是 bug 反馈、功能建议还是文档改进，都非常欢迎。
 
-PRs and issues are welcome! If this project helps you, please give it a ⭐ Star — it means a lot.
+如果这个项目帮到了你，请给一个 ⭐ **Star** —— 让更多不想折腾命令行的人也能发现它。
+
+PRs and issues welcome! If this project helps you, a ⭐ **Star** helps others discover it too.
 
 ---
 
@@ -208,6 +256,6 @@ PRs and issues are welcome! If this project helps you, please give it a ⭐ Star
 
 <p align="center">
   <sub>
-    <b>Keywords:</b> 飞书机器人 · Feishu Bot · Lark Bot · 飞书AI助手 · Feishu AI Assistant · Lark AI Chatbot · OpenClaw · 飞书自建应用 · Feishu Custom App · Lark Custom App · AI Desktop App · 国产大模型 · Chinese LLM · MiniMax · 智谱GLM · 豆包Doubao · Kimi Moonshot · macOS · Electron · 零依赖 · Zero Dependency · 飞书开放平台 · Feishu Open Platform · Lark Open Platform
+    <b>Keywords:</b> 飞书机器人 · Feishu Bot · Lark Bot · 飞书AI助手 · Feishu AI Assistant · Lark AI Chatbot · OpenClaw · 飞书自建应用 · Feishu Custom App · Lark Custom App · AI Desktop App · 国产大模型 · Chinese LLM · MiniMax · 智谱GLM · 豆包Doubao · Kimi Moonshot · macOS · Electron · 零依赖 · Zero Dependency · 零命令行 · No Command Line · 飞书开放平台 · Feishu Open Platform · Lark Open Platform
   </sub>
 </p>
